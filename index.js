@@ -1,4 +1,4 @@
-// My reference: https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands
+// My reference: https://discordjs.guide/interactions/buttons.html
 // https://discord.com/developers/applications
 
 const fs = require('node:fs');
@@ -37,7 +37,7 @@ for (const file of event_files) {
     else {
 		client.on(event.name, (...args) => event.execute(client, ...args));
 	}
-}
+}	
 
 // Login to discord using bot token
 client.login(process.env['BOT_TOKEN']);
